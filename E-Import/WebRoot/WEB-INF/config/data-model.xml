@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-model>
+    <!-- 运单信息  -->
+	<field name="orderNo"     column="ORDERNO"     index="orderNo" type="string" meta="运单编号" />
+	<field name="bizType"     column="BIZTYPE"     index="null"    type="string" meta="业务类型" />
+	<field name="transType"   column="TRANSTYPE"   index="null"    type="string" meta="运输类型" />
+	<field name="payment"     column="PAYMENT"     index="null"    type="string" meta="付款方式" />
+	<field name="isCOD"       column="ISCOD"       index="null"    type="int"    meta="是否代收款" />
+	<field name="codCy"       column="CODCY"       index="null"    type="string" meta="代收款币种" />
+	<field name="codValue"    column="CODVALUE"    index="null"    type="double" meta="代收款金额" />
+	<field name="isInsure"    column="ISINSURE"    index="null"    type="int"    meta="是否保价" />
+	<field name="insureValue" column="INSUREVALUE" index="null"    type="double" meta="保价金额" />
+	<field name="isSPU"       column="ISSPU"       index="null"    type="int"    meta="是否自提件" />
+	<field name="isInspect"   column="ISINSPECT"   index="null"    type="int"    meta="是否开箱验视" />
+	<field name="isCustoms"   column="ISCUSTOMS"   index="null"    type="int"    meta="是否报关检验" />
+	<field name="specialBiz"  column="SPECIALBIZ"  index="null"    type="string" meta="特殊业务标志" />
+	
+	<!-- 货运公司 -->
+	<field name="companyCode" column="COMPANYCODE" index="companyCode" type="string" meta="货运公司编码" />
+	<field name="companyName" column="COMPANYNAME" index="companyName" type="string" meta="货运公司名称" /> 
+	
+	<!-- 货物描述 -->
+	<field name="gName" column="GNAME" index="gName" type="string" meta="货物名称" />
+	<field name="gType" column="GTYPE" index="null"  type="string" meta="货物类型" />
+	<field name="gQty"  column="GQTY"  index="gQty"  type="int"    meta="货物数量" />
+	<field name="gWt"   column="GWT"   index="gWt"  type="float"  meta="货物重量" />
+	<field name="gVol"  column="GVOL"  index="gVol"  type="float"  meta="货物体积" />
+	<field name="gPkg"  column="GPKG"  index="null"  type="string" meta="货物包装" />
+	<field name="gSize" column="GSIZE" index="null"  type="string" meta="货物尺寸" /> 
+	
+	<!-- 发货信息 -->
+	<field name="sCountry"    column="SCOUNTRY"    index="sCountry"  type="string" meta="始发站：国" />
+	<field name="sProvince"   column="SPROVINCE"   index="sProvince" type="string" meta="始发站：省" />
+	<field name="sCity"       column="SCITY"       index="sCity"     type="string" meta="始发站：市" />
+	<field name="sDistrict"   column="SDISTRICT"   index="null"      type="string" meta="始发站：区/县" />
+	<field name="sCSRCode"    column="SCSRCODE"    index="null"      type="string" meta="发货客户编码" />
+	<field name="sTBID"       column="STBID"       index="null"      type="string" meta="发货客户淘宝ID" />
+	<field name="sOrgan"      column="SORGAN"      index="null"      type="string" meta="发货客户单位" />
+	<field name="sName"       column="SNAME"       index="sName"     type="string" meta="发货客户名称" />
+	<field name="sID"         column="SID"         index="sID"       type="string" meta="发货客户身份证号" />
+	<field name="sMobile"     column="SMOBILE"     index="sMobile"   type="string" meta="发货客户手机" />
+	<field name="sMobileAttr" column="SMOBILEATTR" index="null"      type="string" meta="发货客户手机归属地" />
+	<field name="sMobileType" column="SMOBILETYPE" index="null"      type="string" meta="发货客户手机类型" />
+	<field name="sTel"        column="STEL"        index="sTel"      type="string" meta="发货客户电话" />
+	<field name="sAdd"        column="SADD"        index="sAdd"      type="string" meta="发货客户地址（寄件地址）" />
+	<field name="sZip"        column="SZIP"        index="null"      type="string" meta="发货客户邮编" /> 
+	
+	<!-- 揽件信息 -->
+	<field name="sCourierName"   column="SCOURIERNAME"   index="null"    type="string" meta="揽件员工姓名" />
+	<field name="sCourierMobile" column="SCOURIERMOBILE" index="null"    type="string" meta="揽件员工电话" />
+	<field name="sBrCode"        column="SBRCODE"        index="null"    type="string" meta="揽件网点编号" />
+	<field name="sBrName"        column="SBRNAME"        index="sBrName" type="string" meta="揽件网点名称" />
+	<field name="sBrTel"         column="SBRTEL"         index="null"    type="string" meta="揽件网点电话" />
+	<field name="sBrAdd"         column="SBRADD"         index="null"    type="string" meta="揽件网点地址" /> 
+	
+	<!-- 收发时间 -->
+	<field name="collTime"    column="COLLTIME"    index="null"        type="date" meta="揽件时间" />
+	<field name="orderTime"   column="ORDERTIME"   index="null"        type="date" meta="录单时间" />
+	<field name="delyTime"    column="DELYTIME"    index="delyTime"    type="date" meta="发货时间" />
+	<field name="eATime"      column="EATIME"      index="null"        type="date" meta="预计到达时间" />
+	<field name="sendTime"    column="SENDTIME"    index="null"        type="date" meta="派件时间" />
+	<field name="signoffTime" column="SIGNOFFTIME" index="signoffTime" type="date" meta="客户签收时间" /> 
+	
+	<!-- 收货信息 -->
+	<field name="rCountry"    column="RCOUNTRY"    index="rCountry"  type="string" meta="目的站：国" />
+	<field name="rProvince"   column="RPROVINCE"   index="rProvince" type="string" meta="目的站：省" />
+	<field name="rCity"       column="RCITY"       index="rCity"     type="string" meta="目的站：市" />
+	<field name="rDistrict"   column="RDISTRICT"   index="null"      type="string" meta="目的站：区/县" />
+	<field name="rCSRCode"    column="RCSRCODE"    index="null"      type="string" meta="收货客户编码" />
+	<field name="rTBID"       column="RTBID"       index="null"      type="string" meta="收货客户淘宝ID" />
+	<field name="rOrgan"      column="RORGAN"      index="null"      type="string" meta="收货客户单位" />
+	<field name="rName"       column="RNAME"       index="rName"     type="string" meta="收货客户名称" />
+	<field name="rID"         column="RID"         index="rID"       type="string" meta="收货客户身份证号" />
+	<field name="rMobile"     column="RMOBILE"     index="rMobile"   type="string" meta="收货客户手机" />
+	<field name="rMobileAttr" column="RMOBILEATTR" index="null"      type="string" meta="收货客户手机归属地" />
+	<field name="rMobileType" column="RMOBILETYPE" index="null"      type="string" meta="收货客户手机类型" />
+	<field name="rTel"        column="RTEL"        index="rTel"      type="string" meta="收货客户电话" />
+	<field name="rAdd"        column="RADD"        index="rAdd"      type="string" meta="收货客户地址（收件地址）" />
+	<field name="rZip"        column="RZIP"        index="null"      type="string" meta="收货客户邮编" />
+	
+	<!-- 派件信息  -->
+	<field name="rCourierName"   column="RCOURIERNAME"   index="null"    type="string" meta="派件员工姓名" />
+	<field name="rCourierMobile" column="RCOURIERMOBILE" index="null"    type="string" meta="派件员工电话" />
+	<field name="rBrCode"        column="RBRCODE"        index="null"    type="string" meta="派件网点编号" />
+	<field name="rBrName"        column="RBRNAME"        index="rBrName" type="string" meta="派件网点名称" />
+	<field name="rBrTel"         column="RBRTEL"         index="null"    type="string" meta="派件网点电话" />
+	<field name="rBrAdd"         column="RBRADD"         index="null"    type="string" meta="派件网点地址" /> 
+	
+
+</data-model>
